@@ -10,6 +10,6 @@ export default {
 
     // When you've created your own events, import at the top of the file and add them to the array below.
     events: [
-        PentacoreEvents.EventFunctionMain
+        ...(new Array(PentacoreEvents.length).fill(PentacoreEvents.EventFunctionMain))
     ]
 }
