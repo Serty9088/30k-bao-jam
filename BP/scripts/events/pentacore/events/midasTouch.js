@@ -1,5 +1,6 @@
 import * as f from "../functions.js";
 import { world, system } from "@minecraft/server";
+import { LuckyEventType } from "../main.js";
 
 LuckyEventType.register({
     id: 'MidasTouch',
