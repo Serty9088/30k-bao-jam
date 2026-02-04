@@ -22,6 +22,15 @@
       "entry": "scripts/internal/init.js"
     }
   ],
+  "metadata": {
+    "authors": [
+      "serty.name",
+      "euphrosynelight",
+      "voidcell",
+      ".andexter",
+      "minato4743"
+    ]
+  },
   "dependencies": [
     {
       "module_name": "@minecraft/server",
