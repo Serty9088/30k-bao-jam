@@ -1,6 +1,6 @@
 import * as f from "../functions.js";
 import { world } from "@minecraft/server";
-import { LuckyEventType } from "../index.js";
+import { LuckyEventType } from "../main.js";
 
 LuckyEventType.register({
     callback: (event => {

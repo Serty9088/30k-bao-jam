@@ -2,7 +2,7 @@
   This file defines which events you have added to the lucky block.
 */
 
-import { LuckyEventType as PentacoreEvents } from "./events/pentacore"
+import { LuckyEventType as PentacoreEvents } from "./events/pentacore/main.js";
 
 export default {
     // Make sure to replace this with your own username!

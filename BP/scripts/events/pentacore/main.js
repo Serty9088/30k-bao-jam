@@ -47,4 +47,4 @@ class LuckyEvent {
     }
 }
 
-import "./events/_index.js";
+import "./events/_imports.js";
