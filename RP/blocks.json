@@ -1,0 +1,13 @@
+{
+    "format_version": [1, 1, 0],
+    "bao_30k:lucky_block": {
+        "textures": {
+            "up": "bao_30k:lucky_block",
+            "down": "bao_30k:lucky_block",
+            "north": "bao_30k:lucky_block_side_a",
+            "south": "bao_30k:lucky_block_side_b",
+            "east": "bao_30k:lucky_block",
+            "west": "bao_30k:lucky_block"
+        }
+    }
+}

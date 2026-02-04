@@ -1,0 +1,39 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "BAO 30k Lucky Block Jam",
+    "description": "Made by the BAO Community for the 30k Collaborative Add-on Jam",
+    "uuid": "eb7455df-0a41-4fa7-bb0d-284027dae634",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 130]
+  },
+  "modules": [
+    {
+      "description": "Community Add-on built in collaboration with the members of the Bedrock Add-Ons Minecraft server as part of our 30k member jam!",
+      "type": "data",
+      "uuid": "53492f47-e4a2-4327-9c8b-22051320fb30",
+      "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "7d15e01d-07e3-4551-8666-323e947ead0c",
+      "version": [1, 0, 0],
+      "entry": "scripts/internal/init.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.4.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    },
+    {
+      "uuid": "4c1844f5-ea78-4ad4-a4e7-cd4546405b63",
+      "version": [1, 0, 0]
+    }
+  ]
+}

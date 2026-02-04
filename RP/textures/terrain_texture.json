@@ -1,0 +1,17 @@
+{
+	"resource_pack_name": "tut",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"bao_30k:lucky_block": {
+			"textures": "textures/bao_30k/base/lucky_block"
+		},
+		"bao_30k:lucky_block_side_a": {
+			"textures": "textures/bao_30k/base/lucky_block_side_a"
+		},
+		"bao_30k:lucky_block_side_b": {
+			"textures": "textures/bao_30k/base/lucky_block_side_b"
+		}
+	}
+}
