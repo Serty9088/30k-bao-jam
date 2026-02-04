@@ -1,15 +1,14 @@
-/*
-  This file defines which events you have added to the lucky block.
-*/
-
 import { LuckyEventType as PentacoreEvents } from "./events/pentacore/main.js";
 
 export default {
-    // Make sure to replace this with your own username!
     author: "Pentacore Team",
 
-    // When you've created your own events, import at the top of the file and add them to the array below.
     events: [
-        ...(new Array(PentacoreEvents.length).fill(PentacoreEvents.EventFunctionMain))
+        ...( // READ THIS:
+             // This function randomly selects events from PentacoreEvents using its own algorithm.
+             // In order to balance the weight of our events, we added this functions several times (the same number as events)
+             // This is NOT to increase our events chances!
+            new Array(PentacoreEvents.length).fill(PentacoreEvents.EventFunctionMain)
+        )
     ]
 }
