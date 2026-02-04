@@ -2,7 +2,7 @@ import * as f from "../functions.js";
 import { world, system } from "@minecraft/server";
 
 LuckyEventType.register({
-    id: 'MidasTouch'
+    id: 'MidasTouch',
     callback: (event => { // callback is the name of the property that describes the function
         const player = event.player;
 
