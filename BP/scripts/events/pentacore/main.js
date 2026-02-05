@@ -4,6 +4,8 @@ export {
     LuckyEvent
 }
 
+// Test
+
 /**
  * @typedef LuckyEventTypeRegistrationOptions
  * @property {String} [id]
