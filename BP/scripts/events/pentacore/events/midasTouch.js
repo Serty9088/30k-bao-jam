@@ -24,8 +24,8 @@ LuckyEventType.register({
 
         const midasTick = system.runInterval(() => {
             for (const player of world.getAllPlayers()) {
-                if (player.midasTouch !== undefined) {
-                    const timeLeft = system.currentTick - player.midasTouch;
+                if (playersWithMidasTouch.has(player) !== undefined) {
+                    const timeLeft = system.currentTick - playersWithMidasTouch.get(player);
                     const block = player.getBlockStandingOn();
                     if (block) {
                         if (block.typeId !== "minecraft:gold_block") {
@@ -34,7 +34,7 @@ LuckyEventType.register({
                         }
                     }
                     if (timeLeft >= 20 * 20) {
-                        player.midasTouch = undefined;
+                        playersWithMidasTouch.delete(player);
                         system.clearRun(midasTick);
                         world.afterEvents.entityHitEntity.unsubscribe(hitEntity);
                         world.afterEvents.entityHitBlock.unsubscribe(hitBlock);
@@ -48,7 +48,7 @@ LuckyEventType.register({
             ({ hitEntity: target, damagingEntity: attacker }) => {
                 if (!target.isValid || !attacker.isValid) return;
 
-                if (attacker.midasTouch !== undefined && target.typeId !== "minecraft:player") {
+                if (playersWithMidasTouch.has(attacker) && target.typeId !== "minecraft:player") {
                     particleAndSound(target.location);
                     attacker.dimension.getBlock(target.location).setType("minecraft:gold_block");
                     target.remove();
@@ -59,7 +59,7 @@ LuckyEventType.register({
 
         const hitBlock = world.afterEvents.entityHitBlock.subscribe(
             ({ hitBlock: block, damagingEntity: entity }) => {
-                if (entity.midasTouch !== undefined && block.typeId !== "minecraft:player") {
+                if (playersWithMidasTouch.has(entity) && block.typeId !== "minecraft:player") {
                     if (block.typeId !== "minecraft:gold_block") {
                         particleAndSound(block.center());
                         block.setType("minecraft:gold_block");
