@@ -4,8 +4,6 @@ export {
     LuckyEvent
 }
 
-// Test
-
 /**
  * @typedef LuckyEventTypeRegistrationOptions
  * @property {String} [id]
@@ -19,7 +17,7 @@ class LuckyEventType {
     /** @param {import('@minecraft/server').BlockComponentPlayerBreakEvent} vanillaEventData */
     static EventFunctionMain(vanillaEventData) {
         const luckyEvent = new LuckyEvent(vanillaEventData);
-        const eventType = f.Random.element(this.getAll());
+        const eventType = f.Random.element(LuckyEventType.getAll());
 
         if (eventType) eventType.callback(luckyEvent);
     }
@@ -48,5 +46,3 @@ class LuckyEvent {
         this.player = event.player;
     }
 }
-
-import "./events/_imports.js";
