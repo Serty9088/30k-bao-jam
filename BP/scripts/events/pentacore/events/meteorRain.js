@@ -7,7 +7,7 @@ const meteorRainTimeMap = new WeakMap();
 const rainTime = 20*15;
 
 LuckyEventType.register({
-    id: 'meteor_rain',
+    id: 'meteorRain',
     callback: (async event => {
         const player = event.player;
 
@@ -23,7 +23,7 @@ LuckyEventType.register({
             try {
                 if (!player.isValid || meteorRainTimeMap.get(player) < system.currentTick) return system.clearRun(runId);
 
-                const location = f.Random.location({ x: 32, z: 32 }, player.location);
+                const location = f.Random.location({ x: 20, z: 20 }, player.location);
                 const topMost = player.dimension.getTopmostBlock(location);
                 location.y = Math.min(player.dimension.heightRange.max, Math.max(topMost.y, player.location.y)+50);
 
@@ -32,7 +32,8 @@ LuckyEventType.register({
                 projectile.shoot(f.Vector.multiply(f.Geo.getDirection3D(entity.location, player.location), f.Random.float(0.8, 1.5)), {
                     uncertainty: 45
                 });
-            } catch {
+            } catch(e) {
+                console.error(e);
                 system.clearRun(runId);
             }
         }, 5);
