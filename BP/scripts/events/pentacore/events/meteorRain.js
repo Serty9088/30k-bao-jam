@@ -12,8 +12,6 @@ LuckyEventType.register({
         const player = event.player;
 
         player.sendMessage('§6Current forecast: Heavy rainfall with a high probability of meteors.');
-        await system.waitTicks(20*3);
-        if (!player.isValid) return;
 
         const rainEndTime = meteorRainTimeMap.get(player);
         meteorRainTimeMap.set(player, (rainEndTime || system.currentTick)+rainTime);

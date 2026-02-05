@@ -3,3 +3,4 @@ import "./midasTouch";
 import "./reversedWorld";
 import "./meteorRain";
 import "./randomChunk";
+import "./theFloorIsMagma";
