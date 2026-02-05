@@ -39,6 +39,8 @@ LuckyEventType.register({
         }, 5)
 
         const hitEntity = world.afterEvents.entityHitEntity.subscribe(({ hitEntity: target, damagingEntity: attacker }) => {
+            if (!target.isValid || !attacker.isValid) return;
+
             if (attacker.midasTouch !== undefined && target.typeId !== 'minecraft:player') {
                 particleAndSound(target.location)
                 attacker.dimension.getBlock(target.location).setType('minecraft:gold_block')
