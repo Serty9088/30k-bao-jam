@@ -5,6 +5,6 @@ import { LuckyEventType } from "../main.js";
 LuckyEventType.register({
     callback: (event => {
         world.sendMessage('Mega Super Duper Event');
-        world.sendMessage('Location: ' + f.Vector.toString(event.blockLocation));
+        world.sendMessage('Location: ' + f.Vector.toString(event.block.location));
     })
 });

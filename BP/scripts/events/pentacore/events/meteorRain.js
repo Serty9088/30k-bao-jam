@@ -1,0 +1,40 @@
+import { system } from "@minecraft/server";
+import * as f from "../functions.js";
+import { LuckyEventType } from "../main.js";
+
+/** @type {WeakMap<import('@minecraft/server').Player, Number>} */
+const meteorRainTimeMap = new WeakMap();
+const rainTime = 20*15;
+
+LuckyEventType.register({
+    id: 'meteor_rain',
+    callback: (async event => {
+        const player = event.player;
+
+        player.sendMessage('§6Current forecast: Heavy rainfall with a high probability of meteors.');
+        await system.waitTicks(20*3);
+        if (!player.isValid) return;
+
+        const rainEndTime = meteorRainTimeMap.get(player);
+        meteorRainTimeMap.set(player, (rainEndTime || system.currentTick)+rainTime);
+        if (rainEndTime >= system.currentTick) return;
+
+        const runId = system.runInterval(() => {
+            try {
+                if (!player.isValid || meteorRainTimeMap.get(player) < system.currentTick) return system.clearRun(runId);
+
+                const location = f.Random.location({ x: 32, z: 32 }, player.location);
+                const topMost = player.dimension.getTopmostBlock(location);
+                location.y = Math.min(player.dimension.heightRange.max, Math.max(topMost.y, player.location.y)+50);
+
+                const entity = player.dimension.spawnEntity('bao_30k_pentacore:meteor', location);
+                const projectile = entity.getComponent('projectile');
+                projectile.shoot(f.Vector.multiply(f.Geo.getDirection3D(entity.location, player.location), f.Random.float(0.8, 1.5)), {
+                    uncertainty: 45
+                });
+            } catch {
+                system.clearRun(runId);
+            }
+        }, 5);
+    })
+});
