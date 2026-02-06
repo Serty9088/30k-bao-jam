@@ -9,3 +9,5 @@ import "./itemsFountain";
 import "./superEquipment";
 import "./enchantedEgg";
 import "./endlessZombie";
+import "./foodPack";
+import "./musicEvent";
