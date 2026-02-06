@@ -23,6 +23,24 @@ export function runJob(array, callback) {
 	})
 }
 
+/** @param {import('@minecraft/server').ItemStack} item */
+export function decrementItem(item, count = 1) {
+	item = item.clone();
+	if (item.amount - count <= 0) return undefined;
+	item.amount -= count;
+	return item;
+}
+
+/** @param {import('@minecraft/server').Entity} entity */
+export function getSelected(entity) {
+	return entity.getComponent('equippable')?.getEquipment('Mainhand');
+}
+
+/** @param {import('@minecraft/server').Entity} entity @param {import('@minecraft/server').ItemStack} item */
+export function setSelected(entity, item = undefined) {
+	return entity.getComponent('equippable')?.setEquipment('Mainhand', item);
+}
+
 /**
  * @param {ItemStack} item
  * @param {Object} options

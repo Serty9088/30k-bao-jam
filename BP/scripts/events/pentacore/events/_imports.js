@@ -7,3 +7,5 @@ import "./rickroll";
 import "./theFloorIsMagma";
 import "./itemsFountain";
 import "./superEquipment";
+import "./enchantedEgg";
+import "./endlessZombie";
