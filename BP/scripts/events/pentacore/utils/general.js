@@ -1,4 +1,5 @@
-import { system } from "@minecraft/server";
+import { system, EnchantmentType, EnchantmentTypes } from "@minecraft/server";
+import { Random } from "./math/random.js";
 
 /**
  * @template T
@@ -20,4 +21,40 @@ export function runJob(array, callback) {
 			resolve();
 		})())
 	})
+}
+
+/**
+ * @param {ItemStack} item
+ * @param {Object} options
+ * @param {Number} options.chance [0.0, 1.0]
+ * @param {Number} options.maxAmount
+ * @param {(import("@minecraft/server").EnchantmentType | String)[]} options.types
+ * @param {String[]} options.excludeTypes
+ * @returns {import("@minecraft/server").Enchantment[]} added enchantments 
+ */
+export function addRandomEnchantments(item, options = {}) {
+    const enchantable = item.getComponent('enchantable');
+    if (enchantable == undefined) return [];
+
+    const added = [];
+    for (let type of (options.types || EnchantmentTypes.getAll()).toSorted(() => Math.random() - Math.random())) {
+        if (!(type instanceof EnchantmentType)) type = new EnchantmentType(type);
+
+        if (options.excludeTypes?.includes(type.id)) continue;
+        if (options.chance != undefined && !Random.chance(options.chance * 100)) continue;
+
+        const enchantment = {
+            level: Random.int(1, type.maxLevel),
+            type: type
+        }
+
+        try {
+            enchantable.addEnchantment(enchantment);
+            added.push(enchantment);
+        } catch {};
+
+        if (added.length >= (options.maxAmount || Infinity)) return added;
+    }
+
+    return added;
 }

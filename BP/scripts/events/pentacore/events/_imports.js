@@ -5,3 +5,5 @@ import "./meteorRain";
 import "./randomChunk";
 import "./rickroll";
 import "./theFloorIsMagma";
+import "./itemsFountain";
+import "./superEquipment";
