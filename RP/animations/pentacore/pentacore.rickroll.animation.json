@@ -1,0 +1,22 @@
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.pentacore.rickroll.play_video": {
+            "animation_length": 1000,
+            "loop": true,
+            "sound_effects": {
+                "0.0": {
+                    "effect": "play_audio"
+                }
+            }
+        },
+        "animation.pentacore.rickroll.scale": {
+            "loop": "hold_on_last_frame",
+            "bones": {
+                "screen": {
+                    "scale": ["(v.scale_x ?? 1) * (v.scale ?? 1)", "(v.scale_y ?? 1) * (v.scale ?? 1)", "(v.scale_z ?? 1) * (v.scale ?? 1)"]
+                }
+            }
+        }
+    }
+}

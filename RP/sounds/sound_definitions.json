@@ -1,0 +1,27 @@
+{
+    "format_version": "1.21.50",
+    "sound_definitions": {
+        "pentacore.rickroll": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/pentacore/rickroll",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.rickroll.volume_one_quarter": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": true,
+                    "volume": 0.2,
+                    "name": "sounds/pentacore/rickroll",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        }
+    }
+}

@@ -5,11 +5,7 @@
         "description": "Made by the BAO Community for the 30k Collaborative Add-on Jam",
         "uuid": "4c1844f5-ea78-4ad4-a4e7-cd4546405b63",
         "version": [1, 0, 0],
-        "min_engine_version": [
-            1,
-            21,
-            130
-        ]
+        "min_engine_version": [1, 21, 130]
     },
     "modules": [
         {
@@ -19,13 +15,15 @@
             "version": [1, 0, 0]
         }
     ],
+    "metadata": {
+        "authors": ["serty.name", "euphrosynelight", "voidcell", "8Crafter", "minato4743"],
+        "product_type": "addon"
+    },
     "dependencies": [
         {
             "uuid": "eb7455df-0a41-4fa7-bb0d-284027dae634",
             "version": [1, 0, 0]
         }
     ],
-    "capabilities": [
-        "pbr"
-    ]
+    "capabilities": ["pbr"]
 }

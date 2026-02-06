@@ -1,0 +1,87 @@
+{
+    "format_version": "1.21.50",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "bao_30k_pentacore:rickroll",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "properties": {
+                "bao_30k_pentacore:scale": {
+                    "type": "float",
+                    "range": [-1000.0, 1000.0],
+                    "default": 1.0,
+                    "client_sync": true
+                },
+                "bao_30k_pentacore:scale_x": {
+                    "type": "float",
+                    "range": [-1000.0, 1000.0],
+                    "default": 1.0,
+                    "client_sync": true
+                },
+                "bao_30k_pentacore:scale_y": {
+                    "type": "float",
+                    "range": [-1000.0, 1000.0],
+                    "default": 1.0,
+                    "client_sync": true
+                },
+                "bao_30k_pentacore:scale_z": {
+                    "type": "float",
+                    "range": [-1000.0, 1000.0],
+                    "default": 1.0,
+                    "client_sync": true
+                }
+            }
+        },
+        "component_groups": {
+            "bao_30k_pentacore:transient": {
+                "minecraft:transient": {}
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": ["inanimate", "pentacore", "pentacore_screen", "pentacore_video"]
+            },
+            "minecraft:collision_box": {
+                "height": 0,
+                "width": 0
+            },
+            "minecraft:physics": {
+                "has_collision": false,
+                "has_gravity": false,
+                "push_towards_closest_space": false
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": "no"
+                    }
+                ]
+            },
+            "minecraft:fire_immune": {},
+            "minecraft:knockback_resistance": {
+                "value": 10000,
+                "max": 10000
+            },
+            "minecraft:vibration_damper": {},
+            "minecraft:dimension_bound": {},
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:persistent": {}
+        },
+        "events": {
+            "bao_30k_pentacore:add_transitent": {
+                "add": {
+                    "component_groups": ["bao_30k_pentacore:transient"]
+                }
+            },
+            "bao_30k_pentacore:remove_transitent": {
+                "remove": {
+                    "component_groups": ["bao_30k_pentacore:transient"]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "bao_30k_pentacore:black_box",
+            "materials": {
+                "default": "entity"
+            },
+            "textures": {
+                "default": "textures/bao_30k/pentacore/black"
+            },
+            "geometry": {
+                "default": "geometry.pentacore.black_box"
+            },
+            "animations": {
+                "size": "animation.pentacore.black_box.size"
+            },
+            "scripts": {
+                "pre_animation": ["v.size=q.property('bao_30k_pentacore:size');"],
+                "animate": ["size"]
+            },
+            "render_controllers": ["controller.render.default"]
+        }
+    }
+}
