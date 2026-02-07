@@ -1,4 +1,5 @@
 import "./_example_event";
+import "./amongUsTrapRemix";
 import "./badApple";
 import "./enchantedEgg";
 import "./endlessZombie";

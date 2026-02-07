@@ -92,6 +92,52 @@
                     "load_on_low_memory": true
                 }
             ]
+        },
+        "pentacore.among_us_trap_remix": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": true,
+                    "name": "sounds/pentacore/among_us_trap_remix",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.among_us_trap_remix.no_stream": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": false,
+                    "name": "sounds/pentacore/among_us_trap_remix",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.among_us_trap_remix.adjusted_volume": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": true,
+                    "volume": 0.3,
+                    "name": "sounds/pentacore/among_us_trap_remix",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.among_us_trap_remix.adjusted_volume.no_stream": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": false,
+                    "volume": 0.3,
+                    "name": "sounds/pentacore/among_us_trap_remix",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
         }
     }
 }
