@@ -5,19 +5,89 @@
             "category": "ui",
             "sounds": [
                 {
+                    "stream": true,
                     "name": "sounds/pentacore/rickroll",
                     "is3D": false,
                     "load_on_low_memory": true
                 }
             ]
         },
-        "pentacore.rickroll.volume_one_quarter": {
+        "pentacore.rickroll.no_stream": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": false,
+                    "name": "sounds/pentacore/rickroll",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.rickroll.adjusted_volume": {
             "category": "ui",
             "sounds": [
                 {
                     "stream": true,
                     "volume": 0.2,
                     "name": "sounds/pentacore/rickroll",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.rickroll.adjusted_volume.no_stream": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": false,
+                    "volume": 0.2,
+                    "name": "sounds/pentacore/rickroll",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.bad_apple": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": true,
+                    "name": "sounds/pentacore/bad_apple",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.bad_apple.no_stream": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": false,
+                    "name": "sounds/pentacore/bad_apple",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.bad_apple.adjusted_volume": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": true,
+                    "volume": 0.1,
+                    "name": "sounds/pentacore/bad_apple",
+                    "is3D": false,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "pentacore.bad_apple.adjusted_volume.no_stream": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "stream": false,
+                    "volume": 0.1,
+                    "name": "sounds/pentacore/bad_apple",
                     "is3D": false,
                     "load_on_low_memory": true
                 }

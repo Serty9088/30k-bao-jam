@@ -1,6 +1,6 @@
 //@ts-check
 import * as f from "../functions.js";
-import { world, system, GameMode, InputPermissionCategory, InputButton, ButtonState, HudVisibility } from "@minecraft/server";
+import { world, system, GameMode, InputPermissionCategory, InputButton, ButtonState, HudVisibility, TicksPerSecond, WeatherType } from "@minecraft/server";
 import { LuckyEventType } from "../main.js";
 
 const FRAMES = 2131;
@@ -12,10 +12,10 @@ LuckyEventType.register({
     callback: async (event) => {
         // callback is the name of the property that describes the function
         const player = event.player;
-        if (!player) return; // TEMP
+        if (!player) return;
 
         const dim = player.dimension;
-        world.sendMessage(`${player.name} has been §gRickrolled!`)
+        world.sendMessage(`${player.name} has been §gRickrolled!`);
 
         player.setDynamicProperty("bao_30k_pentacore:rickroll;player_pos", JSON.stringify({ ...player.location, dimension: player.dimension.id }));
         player.setDynamicProperty("bao_30k_pentacore:rickroll;player_game_mode", player.getGameMode());
@@ -23,6 +23,7 @@ LuckyEventType.register({
         player.inputPermissions.setPermissionCategory(InputPermissionCategory.Movement, false);
         player.inputPermissions.setPermissionCategory(InputPermissionCategory.Camera, false);
         player.onScreenDisplay.setHudVisibility(HudVisibility.Hide);
+        dim.setWeather(WeatherType.Clear, ((VIDEO_DURATION / 1000) + 10) * TicksPerSecond);
 
         // Randomize height range to reduce the chance of multiple players viewing the video in the same position.
         const viewingAreaPos = { ...player.location, y: Math.floor(Math.random() * 1500) + dim.heightRange.max + 500 };
@@ -83,7 +84,7 @@ LuckyEventType.register({
                 player.inputPermissions.setPermissionCategory(InputPermissionCategory.Camera, true);
                 player.camera.clear();
                 player.onScreenDisplay.setHudVisibility(HudVisibility.Reset);
-                player.runCommand("stopsound @s pentacore.rickroll.volume_one_quarter");
+                player.runCommand("stopsound @s pentacore.rickroll.adjusted_volume");
                 player.setDynamicProperty("bao_30k_pentacore:rickroll;player_pos");
                 player.setDynamicProperty("bao_30k_pentacore:rickroll;player_game_mode");
             }
@@ -124,7 +125,7 @@ world.afterEvents.playerSpawn.subscribe((event) => {
         event.player.inputPermissions.setPermissionCategory(InputPermissionCategory.Camera, true);
         event.player.camera.clear();
         event.player.onScreenDisplay.setHudVisibility(HudVisibility.Reset);
-        event.player.runCommand("stopsound @s pentacore.rickroll.volume_one_quarter");
+        event.player.runCommand("stopsound @s pentacore.rickroll.adjusted_volume");
         event.player.setDynamicProperty("bao_30k_pentacore:rickroll;player_pos");
         event.player.setDynamicProperty("bao_30k_pentacore:rickroll;player_game_mode");
     }
@@ -150,7 +151,7 @@ world.afterEvents.worldLoad.subscribe(() => {
             player.inputPermissions.setPermissionCategory(InputPermissionCategory.Camera, true);
             player.camera.clear();
             player.onScreenDisplay.setHudVisibility(HudVisibility.Reset);
-            player.runCommand("stopsound @s pentacore.rickroll.volume_one_quarter");
+            player.runCommand("stopsound @s pentacore.rickroll.adjusted_volume");
             player.setDynamicProperty("bao_30k_pentacore:rickroll;player_pos");
             player.setDynamicProperty("bao_30k_pentacore:rickroll;player_game_mode");
         }

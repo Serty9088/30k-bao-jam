@@ -448,10 +448,11 @@
             "animations": {
                 // mc-disable-next-line minecraft.animation.unused
                 "play_video": "animation.pentacore.rickroll.play_video",
+                // mc-disable-next-line minecraft.animation.unused
                 "scale": "animation.pentacore.rickroll.scale"
             },
             "sound_effects": {
-                "play_audio": "pentacore.rickroll.volume_one_quarter"
+                "play_audio": "pentacore.rickroll.adjusted_volume"
             },
             "scripts": {
                 "initialize": ["variable.fps=10;", "variable.frames=2130;", "variable.fpa=5;"],
