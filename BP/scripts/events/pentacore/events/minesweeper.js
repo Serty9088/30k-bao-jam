@@ -515,7 +515,6 @@ function savePlayerStateMeta(player, originalLocation) {
     savePlayersToDynamic();
 
     if (debug) console.log(`Saved player ${player.name} to chests at`, chestPos);
-    return saved;
 }
 
 function restorePlayerStateMeta(playerId, won = false) {
@@ -603,10 +602,13 @@ LuckyEventType.register({
             z: player.location.z,
             dimension: player.dimension.id
         };
-        const saveMeta = savePlayerStateMeta(player, originalLocation);
+
+        savePlayerStateMeta(player, originalLocation);
 
         world.structureManager.place("bao_30k_pentacore:minesweeper", dimension, structureSpawnLocation);
         player.teleport(playerSpawnLocation);
+        player.sendMessage("§6Minesweeper event started!");
+        player.sendMessage("§aNote: Your items will be returned to you when you win or lose the game!");
     }
 });
 
