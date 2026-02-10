@@ -12,6 +12,9 @@
 		},
 		"bao_30k:lucky_block_side_b": {
 			"textures": "textures/bao_30k/base/lucky_block_side_b"
+		},
+		"bao_30k_pentacore:minesweeper": {
+			"textures": "textures/bao_30k/pentacore/minesweeper/minesweeper"
 		}
 	}
 }

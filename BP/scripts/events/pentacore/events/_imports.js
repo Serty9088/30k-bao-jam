@@ -13,3 +13,4 @@ import "./reversedWorld";
 import "./rickroll";
 import "./superEquipment";
 import "./theFloorIsMagma";
+import "./minesweeper";
