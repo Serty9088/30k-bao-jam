@@ -343,29 +343,32 @@
                 "fs3": "geometry.pentacore.bad_apple.fs3",
                 "fs4": "geometry.pentacore.bad_apple.fs4"
             },
-            "animations": {
-                // mc-disable-next-line minecraft.animation.unused
-                "play_video": "animation.pentacore.bad_apple.play_video",
-                // mc-disable-next-line minecraft.animation.unused
-                "scale": "animation.pentacore.bad_apple.scale"
-            },
-            "sound_effects": {
-                "play_audio": "pentacore.bad_apple.adjusted_volume"
-            },
             "scripts": {
-                "initialize": ["variable.fps=5;", "variable.frames=1620;", "variable.fpa=5;"],
+                "initialize": [
+                    "variable.fps=5;",
+                    "variable.frames=1620;",
+                    "variable.fpa=5;"
+                ],
                 "pre_animation": [
                     "v.scale=q.property('bao_30k_pentacore:scale');",
                     "v.scale_x=q.property('bao_30k_pentacore:scale_x');",
                     "v.scale_y=q.property('bao_30k_pentacore:scale_y');",
                     "v.scale_z=q.property('bao_30k_pentacore:scale_z');"
                 ],
-                // "animate": ["scale"]
                 "scalex": "v.scale_x * v.scale",
                 "scaley": "v.scale_y * v.scale",
                 "scalez": "v.scale_z * v.scale"
             },
-            "render_controllers": ["controller.render.pentacore.bad_apple"]
+            "animations": {
+                "play_video": "animation.pentacore.bad_apple.play_video",
+                "scale": "animation.pentacore.bad_apple.scale"
+            },
+            "sound_effects": {
+                "play_audio": "pentacore.bad_apple.adjusted_volume"
+            },
+            "render_controllers": [
+                "controller.render.pentacore.bad_apple"
+            ]
         }
     }
 }

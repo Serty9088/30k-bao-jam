@@ -12,14 +12,20 @@
             "geometry": {
                 "default": "geometry.pentacore.black_box"
             },
+            "scripts": {
+                "pre_animation": [
+                    "v.size=q.property('bao_30k_pentacore:size');"
+                ],
+                "animate": [
+                    "size"
+                ]
+            },
             "animations": {
                 "size": "animation.pentacore.black_box.size"
             },
-            "scripts": {
-                "pre_animation": ["v.size=q.property('bao_30k_pentacore:size');"],
-                "animate": ["size"]
-            },
-            "render_controllers": ["controller.render.default"]
+            "render_controllers": [
+                "controller.render.default"
+            ]
         }
     }
 }

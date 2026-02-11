@@ -5,9 +5,8 @@ export default {
 
     events: [
         ...( // READ THIS:
-             // This function randomly selects events from PentacoreEvents using its own algorithm.
-             // In order to balance the weight of our events, we added this functions several times (the same number as events)
-             // This is NOT to increase our events chances!
+             // This function just triggers a random event from our events list
+             // This is NOT to increase our events chances and the weight of all events is the same!
             new Array(PentacoreEvents.getAll().length).fill(PentacoreEvents.EventFunctionMain)
         )
     ]

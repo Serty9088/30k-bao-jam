@@ -8,8 +8,11 @@
             "properties": {
                 "bao_30k_pentacore:size": {
                     "type": "float",
-                    "range": [-1000.0, 1000.0],
-                    "default": 1.0,
+                    "range": [
+                        -1000,
+                        1000
+                    ],
+                    "default": 1,
                     "client_sync": true
                 }
             }
@@ -21,7 +24,10 @@
         },
         "components": {
             "minecraft:type_family": {
-                "family": ["inanimate", "pentacore"]
+                "family": [
+                    "inanimate",
+                    "pentacore"
+                ]
             },
             "minecraft:collision_box": {
                 "height": 0,
@@ -31,6 +37,10 @@
                 "has_collision": false,
                 "has_gravity": false,
                 "push_towards_closest_space": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
             },
             "minecraft:damage_sensor": {
                 "triggers": [
@@ -47,21 +57,21 @@
             },
             "minecraft:vibration_damper": {},
             "minecraft:dimension_bound": {},
-            "minecraft:pushable": {
-                "is_pushable": false,
-                "is_pushable_by_piston": false
-            },
             "minecraft:persistent": {}
         },
         "events": {
             "bao_30k_pentacore:add_transitent": {
                 "add": {
-                    "component_groups": ["bao_30k_pentacore:transient"]
+                    "component_groups": [
+                        "bao_30k_pentacore:transient"
+                    ]
                 }
             },
             "bao_30k_pentacore:remove_transitent": {
                 "remove": {
-                    "component_groups": ["bao_30k_pentacore:transient"]
+                    "component_groups": [
+                        "bao_30k_pentacore:transient"
+                    ]
                 }
             }
         }

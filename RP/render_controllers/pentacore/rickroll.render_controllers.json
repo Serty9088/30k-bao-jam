@@ -453,14 +453,7 @@
                 "query.graphics_mode_is_any('raytraced') ? texture.frame_overlay : (math.floor(query.anim_time * v.fps) == 0 || math.floor(query.anim_time * v.fps) > v.frames) ? texture.black_frame : Array.video_frames[math.floor((query.anim_time * v.fps - 1) / v.fpa)]",
                 "(math.floor(query.anim_time * v.fps) == 0 || math.floor(query.anim_time * v.fps) > v.frames) ? texture.black_frame : Array.video_frames[math.floor((query.anim_time * v.fps - 1) / v.fpa)]"
             ],
-            // "filter_lighting": true,
-            "ignore_lighting": true /* ,
-            "color": {
-                "r": "1.0",
-                "g": "1.0",
-                "b": "1.0",
-                "a": "0.5"
-            } */
+            "ignore_lighting": true
         }
     }
 }

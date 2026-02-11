@@ -14,7 +14,11 @@
             "loop": "hold_on_last_frame",
             "bones": {
                 "screen": {
-                    "scale": ["(v.scale_x ?? 1) * (v.scale ?? 1)", "(v.scale_y ?? 1) * (v.scale ?? 1)", "(v.scale_z ?? 1) * (v.scale ?? 1)"]
+                    "scale": [
+                        "(v.scale_x ?? 1) * (v.scale ?? 1)",
+                        "(v.scale_y ?? 1) * (v.scale ?? 1)",
+                        "(v.scale_z ?? 1) * (v.scale ?? 1)"
+                    ]
                 }
             }
         }

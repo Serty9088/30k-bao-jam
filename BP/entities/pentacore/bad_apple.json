@@ -8,26 +8,38 @@
             "properties": {
                 "bao_30k_pentacore:scale": {
                     "type": "float",
-                    "range": [-1000.0, 1000.0],
-                    "default": 1.0,
+                    "range": [
+                        -1000,
+                        1000
+                    ],
+                    "default": 1,
                     "client_sync": true
                 },
                 "bao_30k_pentacore:scale_x": {
                     "type": "float",
-                    "range": [-1000.0, 1000.0],
-                    "default": 1.0,
+                    "range": [
+                        -1000,
+                        1000
+                    ],
+                    "default": 1,
                     "client_sync": true
                 },
                 "bao_30k_pentacore:scale_y": {
                     "type": "float",
-                    "range": [-1000.0, 1000.0],
-                    "default": 1.0,
+                    "range": [
+                        -1000,
+                        1000
+                    ],
+                    "default": 1,
                     "client_sync": true
                 },
                 "bao_30k_pentacore:scale_z": {
                     "type": "float",
-                    "range": [-1000.0, 1000.0],
-                    "default": 1.0,
+                    "range": [
+                        -1000,
+                        1000
+                    ],
+                    "default": 1,
                     "client_sync": true
                 }
             }
@@ -39,7 +51,12 @@
         },
         "components": {
             "minecraft:type_family": {
-                "family": ["inanimate", "pentacore", "pentacore_screen", "pentacore_video"]
+                "family": [
+                    "inanimate",
+                    "pentacore",
+                    "pentacore_screen",
+                    "pentacore_video"
+                ]
             },
             "minecraft:collision_box": {
                 "height": 0,
@@ -49,6 +66,10 @@
                 "has_collision": false,
                 "has_gravity": false,
                 "push_towards_closest_space": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
             },
             "minecraft:damage_sensor": {
                 "triggers": [
@@ -65,21 +86,21 @@
             },
             "minecraft:vibration_damper": {},
             "minecraft:dimension_bound": {},
-            "minecraft:pushable": {
-                "is_pushable": false,
-                "is_pushable_by_piston": false
-            },
             "minecraft:persistent": {}
         },
         "events": {
             "bao_30k_pentacore:add_transitent": {
                 "add": {
-                    "component_groups": ["bao_30k_pentacore:transient"]
+                    "component_groups": [
+                        "bao_30k_pentacore:transient"
+                    ]
                 }
             },
             "bao_30k_pentacore:remove_transitent": {
                 "remove": {
-                    "component_groups": ["bao_30k_pentacore:transient"]
+                    "component_groups": [
+                        "bao_30k_pentacore:transient"
+                    ]
                 }
             }
         }
