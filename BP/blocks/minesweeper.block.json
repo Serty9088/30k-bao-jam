@@ -1,0 +1,52 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bao_30k_pentacore:minesweeper",
+			"menu_category": {
+				"category": "construction"
+			},
+			"states": {
+				"bao_30k_pentacore:is_flagged": [false, true],
+				"bao_30k_pentacore:is_mine": [false, true],
+				"bao_30k_pentacore:adjacent_mines": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+				"bao_30k_pentacore:exploded": [false, true]
+			},
+			"traits": {}
+		},
+		"components": {
+			"minecraft:collision_box": true,
+			"minecraft:selection_box": true,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:destruction_particles": {
+				"texture": "stone"
+			},
+			"minecraft:geometry": {
+				"bone_visibility": {
+					"1": "query.block_state('bao_30k_pentacore:adjacent_mines') == 1",
+					"2": "query.block_state('bao_30k_pentacore:adjacent_mines') == 2",
+					"3": "query.block_state('bao_30k_pentacore:adjacent_mines') == 3",
+					"4": "query.block_state('bao_30k_pentacore:adjacent_mines') == 4",
+					"5": "query.block_state('bao_30k_pentacore:adjacent_mines') == 5",
+					"6": "query.block_state('bao_30k_pentacore:adjacent_mines') == 6",
+					"7": "query.block_state('bao_30k_pentacore:adjacent_mines') == 7",
+					"8": "query.block_state('bao_30k_pentacore:adjacent_mines') == 8",
+					"flag": "query.block_state('bao_30k_pentacore:is_flagged') == true",
+					"mine": "query.block_state('bao_30k_pentacore:exploded') == true",
+					"button": "query.block_state('bao_30k_pentacore:adjacent_mines') == 0"
+				},
+				"identifier": "geometry.bao_30k_pentacore_minesweeper"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bao_30k_pentacore:minesweeper",
+					"render_method": "opaque",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:map_color": "#d2d2d2"
+		}
+	}
+}
