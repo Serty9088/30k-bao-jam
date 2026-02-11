@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bao_30k_pentacore:lord_placeholder",
+			"materials": {
+				"default": "piglin"
+			},
+			"textures": {
+				"default": "textures/entity/bao_30k_pentacore/lord_placeholder"
+			},
+			"geometry": {
+				"default": "geometry.lord_placeholder"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target_controller",
+					"bob",
+					"other_heads_look"
+				]
+			},
+			"animations": {
+				"bob": "animation.humanoid.bob",
+				"other_heads_look": "animation.lord_placeholder.other_heads_look",
+				"look_at_target_controller": "controller.animation.humanoid.look_at_target",
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming"
+			},
+			"render_controllers": ["controller.render.piglin"]
+		}
+	}
+}

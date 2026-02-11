@@ -1,0 +1,20 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"bao_30k_pentacore:lord_placeholder": {
+				"events": {
+					"ambient": "mob.piglin.ambient",
+					"attack": "mob.piglin.attack",
+					"death": "mob.piglin.death",
+					"hurt": "mob.piglin.hurt",
+					"step": {
+						"sound": "mob.piglin.step",
+						"volume": 0.35
+					}
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 1
+			}
+		}
+	}
+}
