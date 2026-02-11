@@ -14,3 +14,4 @@ import "./rickroll";
 import "./superEquipment";
 import "./theFloorIsMagma";
 import "./minesweeper";
+import "./lord_placeholder";

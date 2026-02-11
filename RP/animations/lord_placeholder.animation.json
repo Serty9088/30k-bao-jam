@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.lord_placeholder.other_heads_look": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"head3": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation+15", 0]
+				},
+				"head2": {
+					"rotation": ["query.target_x_rotation", "-15+query.target_y_rotation", 0]
+				}
+			}
+		}
+	}
+}
