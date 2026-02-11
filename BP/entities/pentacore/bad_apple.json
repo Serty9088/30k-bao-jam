@@ -9,37 +9,37 @@
                 "bao_30k_pentacore:scale": {
                     "type": "float",
                     "range": [
-                        -1000,
-                        1000
+                        -1000.0,
+                        1000.0
                     ],
-                    "default": 1,
+                    "default": 1.0,
                     "client_sync": true
                 },
                 "bao_30k_pentacore:scale_x": {
                     "type": "float",
                     "range": [
-                        -1000,
-                        1000
+                        -1000.0,
+                        1000.0
                     ],
-                    "default": 1,
+                    "default": 1.0,
                     "client_sync": true
                 },
                 "bao_30k_pentacore:scale_y": {
                     "type": "float",
                     "range": [
-                        -1000,
-                        1000
+                        -1000.0,
+                        1000.0
                     ],
-                    "default": 1,
+                    "default": 1.0,
                     "client_sync": true
                 },
                 "bao_30k_pentacore:scale_z": {
                     "type": "float",
                     "range": [
-                        -1000,
-                        1000
+                        -1000.0,
+                        1000.0
                     ],
-                    "default": 1,
+                    "default": 1.0,
                     "client_sync": true
                 }
             }

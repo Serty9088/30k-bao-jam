@@ -9,10 +9,10 @@
                 "bao_30k_pentacore:size": {
                     "type": "float",
                     "range": [
-                        -1000,
-                        1000
+                        -1000.0,
+                        1000.0
                     ],
-                    "default": 1,
+                    "default": 1.0,
                     "client_sync": true
                 }
             }
