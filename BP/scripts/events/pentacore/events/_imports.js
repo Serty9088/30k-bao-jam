@@ -15,3 +15,6 @@ import "./superEquipment";
 import "./theFloorIsMagma";
 import "./minesweeper";
 import "./lord_placeholder";
+import "./pyramidStructure.js";
+import "./tamedWolfs.js";
+import "./quantumJellyfish.js";

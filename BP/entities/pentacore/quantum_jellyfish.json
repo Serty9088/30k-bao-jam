@@ -1,0 +1,80 @@
+{
+    "format_version": "1.21.40",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "bao_30k_pentacore:quantum_jellyfish",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "runtime_identifier": "minecraft:snowball",
+            "properties": {
+                "bao_30k_pentacore:rotation_x": {
+                    "client_sync": true,
+                    "type": "float",
+                    "default": 0.0,
+                    "range": [-90.0, 90.0]
+                },
+                "bao_30k_pentacore:rotation_y": {
+                    "client_sync": true,
+                    "type": "float",
+                    "default": 0.0,
+                    "range": [-180.0, 180.0]
+                }
+            }
+        },
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 0.6
+            },
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "max_optimized_distance": 80,
+                    "max_dropped_ticks": 12,
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:despawn": {
+                "despawn_from_chance": true,
+                "despawn_from_distance": {},
+                "despawn_from_simulation_edge": true,
+                "min_range_random_chance": 200
+            },
+            "minecraft:projectile": {
+                "destroy_on_hurt": false,
+                "gravity": 0.002,
+                "inertia": 0.9,
+                "knockback": true,
+                "liquid_inertia": 0.9,
+                "power": 1.3,
+                "reflect_on_hurt": false,
+                "shoot_target": false,
+                "should_bounce": true,
+                "splash_potion": false,
+                "uncertainty_base": 0,
+                "uncertainty_multiplier": 0
+            },
+            "minecraft:timer": {
+                "randomInterval": true,
+                "time": [
+                    2, 5
+                ],
+                "looping": true,
+                "time_down_event": {
+                    "event": "bao_30k_pentacore:quantum_jellyfish_move",
+                    "target": "self"
+                }
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            }
+        },
+        "events": {
+            "bao_30k_pentacore:quantum_jellyfish_move": {}
+        }
+    }
+}

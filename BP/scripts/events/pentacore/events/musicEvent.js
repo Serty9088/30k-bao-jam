@@ -1,4 +1,4 @@
-import { ItemStack, ItemTypes } from "@minecraft/server";
+import { ItemTypes } from "@minecraft/server";
 import { LuckyEventType } from "../main.js";
 
 LuckyEventType.register({

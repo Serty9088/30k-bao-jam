@@ -1,0 +1,28 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "bao_30k_pentacore:quantum_jellyfish",
+            "materials": {
+                "default": "entity_alphablend"
+            },
+            "textures": {
+                "default": "textures/entity/bao_30k_pentacore/quantum_jellyfish"
+            },
+            "geometry": {
+                "default": "geometry.quantum_jellyfish"
+            },
+            "scripts": {
+                "animate": [
+                    "rotation"
+                ]
+            },
+            "animations": {
+                "rotation": "animation.quantum_jellyfish.rotation"
+            },
+            "render_controllers": [
+                "controller.render.skeleton"
+            ]
+        }
+    }
+}
