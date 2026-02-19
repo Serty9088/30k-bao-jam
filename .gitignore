@@ -1,6 +1,0 @@
-# Ignore large video files
-media/videos/minesweeper.mp4
-
-# Ignore other large files
-*.zip
-ffmpeg.zip
