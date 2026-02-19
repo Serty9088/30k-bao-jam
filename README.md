@@ -5,7 +5,7 @@ Welcome to the **Pentacore Lucky Events** - a collection of 19 unique events cre
 ---
 
 > [!NOTE]  
-> You can download **Pentacore Lucky Events.zip** file alone to avoid downloading the media folder that is used for event video previews.
+> You can download **Pentacore Lucky Events.zip** file alone.
 
 ## Event Collection
 
