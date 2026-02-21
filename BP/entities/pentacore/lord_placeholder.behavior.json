@@ -51,7 +51,7 @@
 				"max": 80
 			},
 			"minecraft:loot": {
-				"table": "loot_tables/entities/lord_placeholder.json"
+				"table": "loot_tables/bao_30k/entities/lord_placeholder.json"
 			},
 			"minecraft:navigation.walk": {
 				"can_path_over_water": true,
