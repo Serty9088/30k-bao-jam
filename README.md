@@ -5,7 +5,7 @@ Welcome to the **Pentacore Lucky Events** - a collection of 19 unique events cre
 ---
 
 > [!NOTE]  
-> You can download **Pentacore Lucky Events.zip** file alone.
+> You can download **bao_30k_pentacore_events_pack.zip** file alone.
 
 ## Event Collection
 
